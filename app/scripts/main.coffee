@@ -1,15 +1,23 @@
 $ ->
-  demo = new Vue(
-    el: "#demo"
-    data:
-      firstName: "太郎"
-      lastName: "山田"
-      count: 0
-      #message: ""  ← 初期値を設定しないでいいなら省ける
-    methods:
-      execute: ->
-        @message = "実行しました"
-        return
-  )
+
+  makeViewModel = () ->
+
+    count = 0
+
+    obj =
+      el: "#demo"
+      data:
+        firstName: "太郎"
+        lastName: "山田"
+        message: ""
+      methods:
+        displayCount: ->
+          @message = count + " 回です。"
+          count++
+          return
+
+    return obj
+
+  new Vue makeViewModel()
 
   return

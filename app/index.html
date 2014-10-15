@@ -25,35 +25,24 @@
 
       <div id="demo">
 
-        <h4><font color="orange">データバインドの例</font></h4>
+        <h4><font color="orange">普通のデータタバインド</font></h4>
 
-        <p>
-          {{lastName}} {{firstName}}
-        </p>
         <p>
           <input v-model="lastName"/> <input v-model="firstName"/>
         </p>
-
-        <hr>
-
-        <h4><font color="orange">クリックイベントの例</font></h4>
-
         <p>
-          {{count}}
-        </p>
-        <p>
-          <button class="btn btn-primary" v-on="click: count++">カウント</button>
+          {{lastName}} {{firstName}}
         </p>
 
         <hr>
 
-        <h4><font color="orange">メソッド実行の例</font></h4>
+        <h4><font color="orange">クリックカウントの表示</font></h4>
 
+        <p>
+          <button class="btn btn-primary" v-on="click: displayCount">カウント</button>
+        </p>
         <p>
           {{message}}
-        </p>
-        <p>
-          <button class="btn btn-primary" v-on="click: execute">実行</button>
         </p>
 
       </div>
