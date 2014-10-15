@@ -1,0 +1,1 @@
+(function(){$(function(){var a;a=function(){var a,b;return a=0,b={el:"#demo",data:{firstName:"太郎",lastName:"山田",message:""},methods:{displayCount:function(){this.message=a+" 回です。",a++}}}},new Vue(a())})}).call(this);
